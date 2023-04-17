@@ -11,17 +11,17 @@
       }
       
       .listItems::-webkit-scrollbar-track {
-        background-color: rgba(255, 255, 255, 0.024);
+        background-color: rgba(255, 255, 255, 0);
       }
       
       .listItems::-webkit-scrollbar-thumb {
         
-        background-color: #3e8e41;
+        background-color: #3e8e412b;
         border-radius: 5px;
       }
       
       .listItems::-webkit-scrollbar-thumb:hover {
-        background-color: greenyellow;
+        background-color: rgba(172, 255, 47, 0.43);
       }
 
     .sectionHeading {
