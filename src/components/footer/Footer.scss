@@ -1,0 +1,89 @@
+// CSS
+@import "../../mixins.scss";
+.footer {
+    background-color: rgb(9, 31, 9);
+    padding: 50px 0;
+    color: white;
+    position: relative;
+    display: flex;
+    
+    .contentWrapper {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .menuItems {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 20px;
+        @include md {
+            margin-bottom: 30px;
+            gap: 30px;
+        }
+        .menuItem {
+            transition: all ease 0.3s;
+            cursor: pointer;
+            font-size: 12px;
+            @include md {
+                font-size: 16px;
+            }
+            &:hover {
+                color: greenyellow;
+            }
+        }
+    }
+    .infoText {
+        display: flexbox;
+        font-size: 12px;
+        line-height: 20px;
+        opacity: 0.5;
+        text-align: center;
+        max-width: 1000px;
+        margin-bottom: 20px;
+    
+        @include md {
+            font-size: 14px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            padding : 0 10px;
+            width: 1000px;
+        }
+    }
+    .socialIcons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        .icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 10%;
+            background-color: rgba(255, 255, 255, 0.115);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all ease 0.3s;
+           
+
+            
+        }
+        .fb:hover {
+            background-color: rgb(0, 81, 243);
+            
+        }.insta:hover {
+            background-color: rgb(225, 48, 108);
+           
+        }.twitt:hover {
+            background-color: rgb(0, 200, 255);
+        }.link:hover {
+            background-color: rgb(0, 119, 181);
+        }
+    }
+}

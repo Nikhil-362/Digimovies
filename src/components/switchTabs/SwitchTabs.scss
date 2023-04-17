@@ -1,0 +1,45 @@
+.switchingTabs {
+    height: 34px;
+    background-color: rgba(255, 255, 255, 0.248);
+    border-radius: 20px;
+    padding: 2px;
+    margin-left: 30px;
+    width: 205px;
+    
+
+    .tabItems {
+        display: flex;
+        align-items: center;
+        height: 30px;
+        position: relative;
+        
+        .tabItem {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100px;
+            color: var(--black);
+            font-size: 14px;
+            position: relative;
+            z-index: 1;
+            color: rgb(255, 255, 255);
+            cursor: pointer;
+            transition: color ease 0.3s;
+            &.active {
+                color: rgb(8, 8, 8);
+                font-weight: bold;
+            }
+        }
+        .movingBg {
+            height: 30px;
+            width: 100px;
+            border-radius: 15px;
+            background-color: greenYellow;
+            position: absolute;
+            left: 0;
+            border: 1px solid black;
+            transition: left cubic-bezier(0.88, -0.35, 0.565, 1.35) 0.4s;
+        }
+    }
+}

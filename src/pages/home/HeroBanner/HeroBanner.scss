@@ -1,0 +1,117 @@
+@import '../../../mixins.scss';
+
+.heroBanner{
+    width: 100%;
+    height: 450px;
+    background-color: rgba(0, 0, 0, 0.638);
+    display: flex;
+    align-items: center;
+    position: relative;
+    @include md{
+        height: 700px;
+    }
+
+    .backdrop-img{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.5;
+        overflow: hidden;
+
+        .lazy-load-image-background{
+            width: 100%;
+            height: 100%;
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    }
+
+    .opacity-layer{
+        width: 100%;
+        height: 250px;
+        position: absolute;
+        background: rgb(2,0,36);
+        background: linear-gradient(180deg, rgba(2,0,36,0) 0%, rgba(121,9,9,0) 10%, #19281f 100%);
+        bottom: 0;
+        left: 0;
+        
+        
+    }
+
+    .heroBannerContent{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        color: white;
+        position: relative;
+        max-width: 800px;
+        margin: 0 auto;
+        
+
+        .title{
+            font-size: 50px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            @include md{
+                margin-bottom: 0;
+                font-size: 90px;
+            }
+        }
+
+        .subtitle{
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 40px;
+            @include md{
+                font-size: 24px;
+            }
+        }
+        
+        .inputbox{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            input{
+                width: calc(100% - 100px);
+                height: 50px;
+                background-color: rgba(255, 255, 255, 0.294);
+                backdrop-filter: blur(2px);
+                color: rgb(255, 255, 255);
+                border-radius: 30px 0 0 30px;
+                font-size: large;
+                font-weight: bold;
+                padding-left: 25px;
+                outline: 0;
+                border: 0;
+
+            }
+            ::placeholder { 
+                color: rgba(255, 255, 255, 0.379);
+              }
+        }
+
+        button{
+            width: 100px;
+            height: 50px;
+            color: black;
+            border-radius: 0 30px 30px 0;
+            background-color: greenyellow;
+            font-size: 20px;
+            outline: 0;
+            border: 0;
+            @include md {
+                width: 150px;
+                height: 50px;
+                font-size: 18px;
+            }
+        }
+    }
+}
