@@ -5,6 +5,25 @@
     position: relative;
     margin-bottom: 50px;
     overflow-x: hidden;
+
+    .listItems::-webkit-scrollbar {
+        height: 10px;
+      }
+      
+      .listItems::-webkit-scrollbar-track {
+        background-color: rgba(255, 255, 255, 0.024);
+      }
+      
+      .listItems::-webkit-scrollbar-thumb {
+        
+        background-color: #3e8e41;
+        border-radius: 5px;
+      }
+      
+      .listItems::-webkit-scrollbar-thumb:hover {
+        background-color: greenyellow;
+      }
+
     .sectionHeading {
         font-size: 24px;
         color: rgb(255, 255, 255);
@@ -17,6 +36,8 @@
         margin-right: -20px;
         margin-left: -20px;
         padding: 0 20px;
+
+        
         @include md {
             margin: 0;
             padding: 0;
