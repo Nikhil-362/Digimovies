@@ -3,8 +3,13 @@
     min-height: 700px;
     padding-top: 100px;
     .resultNotFound {
-        font-size: 24px;
-        color: var(--black-light);
+        font-size: 30px;
+        justify-content: center;
+        display: flex;
+        font-weight: 900;
+        text-transform: capitalize;
+        padding-top: 100px;
+        color: rgba(172, 255, 47, 0.545);
     }
     .pageTitle {
         font-size: 24px;
