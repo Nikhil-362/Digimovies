@@ -22,7 +22,7 @@ const HeroBanner = () => {
   }, [data]);
 
   const searchQuery = (event)=>{
-      if(query && event.key ==="Enter"){
+      if(query && (event.key ==="Enter" || event.target.type ==="submit")){
         navigate(`/search/${query}`)
       }
   }
@@ -46,7 +46,7 @@ const HeroBanner = () => {
             <input type='text' placeholder='Search Movie, Web Series, Tv Shows'
                   onChange={(e)=>{setQuery(e.target.value)}}
                   onKeyDown={searchQuery}></input>
-                  <button> Search</button>
+                  <button onClick={searchQuery}> Search</button>
           </div>
           
         </div>
