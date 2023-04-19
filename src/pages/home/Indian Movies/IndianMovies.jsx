@@ -11,7 +11,8 @@ const IndianMovies = () => {
   
  const [endpoint, setEndpoint] = useState("te");
 
-    const { data, loading } = useFetch(`/discover/movie/`,{ with_original_language : `${endpoint}` ,region : 'in' }, endpoint);
+ let a ={ with_original_language : `${endpoint}` ,region : 'in' }
+    const { data, loading } = useFetch(`/discover/movie/`,a, endpoint);
 
   const onTabChange =(tab)=>{
  setEndpoint(tab === "Telugu"? "te" : "hi");
