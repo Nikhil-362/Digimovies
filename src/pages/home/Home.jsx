@@ -19,10 +19,10 @@ const Home = () => {
       <Back>      
           <Trending/>
           <TopRated/>
-          <IndianMovies/>
+          {/* <IndianMovies/>
           <IndianMovies2/>
-          <IndianMovies3/>
-          {/* <Popular/> */}
+          <IndianMovies3/> */}
+          <Popular/>
         
        
       </Back>
