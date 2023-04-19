@@ -75,7 +75,7 @@ const Carousel = ({data, loading, endpoint, title}) => {
 
                         return(
 
-                           <div key={item.id} className="carouselItem" onClick={()=>{navigate(`/${item.media_type || endpoint}/${item.id}`)}}>
+                           <div key={item.id} className="carouselItem" onClick={()=>{navigate(`/${item.media_type || endpoint || `movie`}/${item.id}`)}}>
                             <div className="posterBlock">
                             
                                 <Img src={posterUrl}/>

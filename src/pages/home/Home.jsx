@@ -4,6 +4,9 @@ import Trending from './Trending/Trending';
 import Popular from './popular/Popular';
 import TopRated from './topRated/TopRated';
 import styled from 'styled-components';
+import IndianMovies from './Indian Movies/IndianMovies';
+import IndianMovies2 from './Indian Movies2/IndianMovies2';
+import IndianMovies3 from './Indian Movies3/IndianMovies3';
 // import Footer from '../../components/footer/Footer';
 
 const Home = () => {
@@ -15,8 +18,13 @@ const Home = () => {
 
       <Back>      
           <Trending/>
-          <Popular/>
           <TopRated/>
+          <IndianMovies/>
+          <IndianMovies2/>
+          <IndianMovies3/>
+          {/* <Popular/> */}
+        
+       
       </Back>
 
     </Homepage>

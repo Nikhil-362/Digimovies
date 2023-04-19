@@ -7,6 +7,8 @@ const headers = {
     Authorization: "bearer " + TMDB_TOKEN,
 };
 
+
+
 export const fetchDataFromApi = async (url, params) => {
     try {
 
@@ -14,7 +16,10 @@ export const fetchDataFromApi = async (url, params) => {
             headers,
             params,
         });
-
+        console.log(BASE_URL + url, {
+            headers,
+            params,
+        });
        
         
         return data;

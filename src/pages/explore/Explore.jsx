@@ -34,11 +34,12 @@ const Explore = () => {
     const [sortby, setSortby] = useState(null);
     const { mediaType } = useParams();
 
-    const { data: genresData } = useFetch(`/genre/${mediaType}/list`);
-
+    const { data: genresData } = useFetch(`/genre/${mediaType}/list`, );
+  
     const fetchInitialData = () => {
         setLoading(true);
         fetchDataFromApi(`/discover/${mediaType}`, filters).then((res) => {
+           
             setData(res);
             setPageNum((prev) => prev + 1);
             setLoading(false);
