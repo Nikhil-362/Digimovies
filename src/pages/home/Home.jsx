@@ -20,8 +20,8 @@ const Home = () => {
           <Trending/>
           <TopRated/>
           
-    {/*  <IndianMovies/>
-          <IndianMovies2/>
+      <IndianMovies/>
+        {/*  <IndianMovies2/>
           <IndianMovies3/> */}
           
           <Popular/>
