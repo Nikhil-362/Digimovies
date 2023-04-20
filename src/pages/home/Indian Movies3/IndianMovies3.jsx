@@ -10,7 +10,8 @@ const IndianMovies3 = () => {
   
  const [endpoint, setEndpoint] = useState("ml");
 
-    const { data, loading } = useFetch(`/discover/movie/`,{ with_original_language : `${endpoint}` ,region : 'in' }, endpoint);
+ let filters ={ with_original_language: endpoint, region: "in"}
+    const { data, loading } = useFetch(`/discover/movie/`, filters, endpoint);
 
   const onTabChange =(tab)=>{
  setEndpoint(tab === "Marathi"? "mr" : "ml");

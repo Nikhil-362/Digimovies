@@ -18,10 +18,7 @@ const sortbyData = [
     { value: "popularity.asc", label: "Popularity Ascending" },
     { value: "vote_average.desc", label: "Rating Descending" },
     { value: "vote_average.asc", label: "Rating Ascending" },
-    {
-        value: "primary_release_date.desc",
-        label: "Release Date Descending",
-    },
+    { value: "primary_release_date.desc", label: "Release Date Descending",},
     { value: "primary_release_date.asc", label: "Release Date Ascending" },
     { value: "original_title.asc", label: "Title (A-Z)" },
 ];
@@ -96,6 +93,10 @@ const Explore = () => {
         setPageNum(1);
         fetchInitialData();
     };
+    // console.log(data);
+    // console.log(genre);
+    // console.log(filters);
+
 
     return (
         <div className="explorePage">
@@ -116,7 +117,7 @@ const Explore = () => {
                             getOptionLabel={(option) => option.name}
                             getOptionValue={(option) => option.id}
                             onChange={onChange}
-                            placeholder="Select genres"
+                            placeholder="Select Genres"
                             className="react-select-container genresDD"
                             classNamePrefix="react-select"
                         />
@@ -126,7 +127,7 @@ const Explore = () => {
                             options={sortbyData}
                             onChange={onChange}
                             isClearable={true}
-                            placeholder="Sort by"
+                            placeholder="Sort By"
                             className="react-select-container sortbyDD"
                             classNamePrefix="react-select"
                         />

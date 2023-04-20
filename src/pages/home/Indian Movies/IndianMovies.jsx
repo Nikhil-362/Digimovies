@@ -4,16 +4,15 @@ import useFetch from "../../../hooks/useFetch";
 import './IndianMovies.scss'
 import Carousel from '../../../components/carousel/Carousel';
 import SwitchTabs from '../../../components/switchTabs/SwitchTabs';
-import { useEffect } from 'react';
+
 
 
 const IndianMovies = () => {
   
  const [endpoint, setEndpoint] = useState("te");
 
- const params = { params: { with_original_language: endpoint, region: "in" } };
- 
- const { data, loading } = useFetch("/discover/movie/", params.params);
+ let filters ={ with_original_language: endpoint, region: "in"}
+ const { data, loading } = useFetch("/discover/movie/", filters , endpoint);
 
   const onTabChange =(tab)=>{
  setEndpoint(tab === "Telugu"? "te" : "hi");
